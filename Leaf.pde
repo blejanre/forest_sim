@@ -1,21 +1,26 @@
-class Leaf {
+class Leaf { 
  
-  int x, y;
+  PVector position;
+  PVector dimension;
+  boolean done_growing;
+
   
-  Leaf() {
-   
+  Leaf(PVector pos) {
     
-    
-  }
-  
-  float photo() {
-    
-    return 0;
+    position = pos;
+    dimension = new PVector (1, 1);
+        
   }
   
   void display() {
     noStroke();
     fill(15,245,87);
-    ellipse(x, y, 20, 20);
+    ellipse(position.x, position.y, 20, 20);
+  }
+  
+   float photo() {
+    
+
+    return 0;
   }
 }
